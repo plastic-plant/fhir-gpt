@@ -1,0 +1,51 @@
+{
+  "resourceType": "Immunization",
+  "id": "nl-core-Vaccination-event-02",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Vaccinatie. Patiënt: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: voltooid<span style=\"display: block;\">Uitvoerende: Healthcare professional (role), GG&amp;GD Nijmegen</span></caption><tfoot><tr><td colspan=\"2\">Bezoek aan Guatemala.</td></tr></tfoot><tbody><tr><th><span title=\"Hepatitis A-vaccin (J07BC02 - http://www.whocc.no/atc)\">Hepatitis A-vaccin</span></th><td><div>Toegediend: </div><div>Gemeld door uitvoerende: </div></td></tr></tbody></table></div>"
+  },
+  "status": "completed",
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "http://www.whocc.no/atc",
+        "code": "J07BC02",
+        "display": "Hepatitis A-vaccin"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "occurrenceDateTime": "2012-06-03",
+  "performer": [
+    {
+      "function": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "code": "AP"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "PractitionerRole/nl-core-Vaccination-02-PractitionerRole-01",
+        "type": "PractitionerRole",
+        "display": "Healthcare professional (role), GG&GD Nijmegen"
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "Bezoek aan Guatemala."
+    }
+  ]
+}

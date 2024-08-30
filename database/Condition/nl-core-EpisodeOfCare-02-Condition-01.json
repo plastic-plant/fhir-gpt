@@ -1,0 +1,39 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-EpisodeOfCare-02-Condition-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"Interpretatie van diagnose (282291009 - SNOMED CT)\">Interpretatie van diagnose</span></caption><tbody><tr><th>Code</th><td><span title=\"Diabetes Mellitus type 2 (T90.02 - sid/icpc-1-nl)\">Diabetes Mellitus type 2</span></td></tr><tr><th>Eerste symptomen</th><td>21 mei 2014</td></tr></tbody></table></div>"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "282291009",
+          "display": "Interpretatie van diagnose"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/icpc-1-nl",
+        "code": "T90.02",
+        "display": "Diabetes Mellitus type 2"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "onsetDateTime": "2014-05-21"
+}

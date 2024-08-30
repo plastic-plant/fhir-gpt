@@ -1,0 +1,157 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-ChecklistPainBehavior-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-ChecklistPainBehavior"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Bepalingdatum/tijd</th><td>10:45:00, 19 december 2016</td></tr><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"Pain Behaviour Checklist (108331000146104 - SNOMED CT)\">Pain Behaviour Checklist</span></td><td>6</td></tr><tr><td><span title=\"ChecklistPijnGedrag Gezicht (12017003 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ChecklistPijnGedrag Gezicht</span></td><td>1</td></tr><tr><td><span title=\"ChecklistPijnGedrag Mond (12017004 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ChecklistPijnGedrag Mond</span></td><td>0</td></tr><tr><td><span title=\"ChecklistPijnGedrag Grimas (12017005 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ChecklistPijnGedrag Grimas</span></td><td>1</td></tr><tr><td><span title=\"ChecklistPijnGedrag VerdrietigeBlik (12017006 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ChecklistPijnGedrag VerdrietigeBlik</span></td><td>0</td></tr><tr><td><span title=\"ChecklistPijnGedrag Ogen (12017007 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ChecklistPijnGedrag Ogen</span></td><td>1</td></tr><tr><td><span title=\"ChecklistPijnGedrag Paniek (12017008 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ChecklistPijnGedrag Paniek</span></td><td>1</td></tr><tr><td><span title=\"ChecklistPijnGedrag Kreunen (12017009 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ChecklistPijnGedrag Kreunen</span></td><td>1</td></tr><tr><td><span title=\"ChecklistPijnGedrag Huilen (12017010 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ChecklistPijnGedrag Huilen</span></td><td>0</td></tr><tr><td><span title=\"ChecklistPijnGedrag Onrustgeluiden (12017011 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ChecklistPijnGedrag Onrustgeluiden</span></td><td>1</td></tr><tr><td><span title=\"ChecklistPijnGedrag Tranen (12017012 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ChecklistPijnGedrag Tranen</span></td><td>0</td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "108331000146104",
+        "display": "Pain Behaviour Checklist"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "effectiveDateTime": "2016-12-19T10:45:00+01:00",
+  "valueInteger": 6,
+  "note": [
+    {
+      "text": "pijn gemeten i.v.m. toegenomen onrust"
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12017003",
+            "display": "ChecklistPijnGedrag Gezicht"
+          }
+        ]
+      },
+      "valueInteger": 1
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12017004",
+            "display": "ChecklistPijnGedrag Mond"
+          }
+        ]
+      },
+      "valueInteger": 0
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12017005",
+            "display": "ChecklistPijnGedrag Grimas"
+          }
+        ]
+      },
+      "valueInteger": 1
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12017006",
+            "display": "ChecklistPijnGedrag VerdrietigeBlik"
+          }
+        ]
+      },
+      "valueInteger": 0
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12017007",
+            "display": "ChecklistPijnGedrag Ogen"
+          }
+        ]
+      },
+      "valueInteger": 1
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12017008",
+            "display": "ChecklistPijnGedrag Paniek"
+          }
+        ]
+      },
+      "valueInteger": 1
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12017009",
+            "display": "ChecklistPijnGedrag Kreunen"
+          }
+        ]
+      },
+      "valueInteger": 1
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12017010",
+            "display": "ChecklistPijnGedrag Huilen"
+          }
+        ]
+      },
+      "valueInteger": 0
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12017011",
+            "display": "ChecklistPijnGedrag Onrustgeluiden"
+          }
+        ]
+      },
+      "valueInteger": 1
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12017012",
+            "display": "ChecklistPijnGedrag Tranen"
+          }
+        ]
+      },
+      "valueInteger": 0
+    }
+  ]
+}

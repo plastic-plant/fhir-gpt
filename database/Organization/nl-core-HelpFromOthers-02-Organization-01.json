@@ -1,0 +1,14 @@
+{
+  "resourceType": "Organization",
+  "id": "nl-core-HelpFromOthers-02-Organization-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Organisatie. </caption><tbody><tr><th>Naam</th><td>Thuiszorg X</td></tr></tbody></table></div>"
+  },
+  "name": "Thuiszorg X"
+}

@@ -1,0 +1,42 @@
+{
+  "resourceType": "EpisodeOfCare",
+  "id": "nl-core-EpisodeOfCare-04",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-EpisodeOfCare"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Zorgepisode. Patiënt: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: voltooid</caption><tbody><tr><th>Periode</th><td>5 april 2014 - 5 april 2015</td></tr><tr><th>Diagnose</th><td>Problem, type: Interpretatie van diagnose</td></tr></tbody></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-EpisodeOfCare.EpisodeOfCareName",
+      "valueString": "slecht instelbaar DM, cave hypo's"
+    },
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Comment",
+      "valueString": "niet te strak instellen op insuline"
+    }
+  ],
+  "status": "finished",
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/nl-core-EpisodeOfCare-02-Condition-01",
+        "type": "Condition",
+        "display": "Problem, type: Interpretatie van diagnose"
+      }
+    }
+  ],
+  "patient": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "period": {
+    "start": "2014-04-05",
+    "end": "2015-04-05"
+  }
+}

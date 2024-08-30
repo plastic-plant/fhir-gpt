@@ -1,0 +1,27 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-MedicalDevice-02-Condition-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. </caption><tbody><tr><th>Code</th><td><span title=\"Presbyacusis (H91.1 - sid/icd-10-nl)\">Presbyacusis</span></td></tr></tbody></table></div>"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-nl",
+        "code": "H91.1",
+        "display": "Presbyacusis"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  }
+}

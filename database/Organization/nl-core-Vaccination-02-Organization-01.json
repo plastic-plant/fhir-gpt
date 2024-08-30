@@ -1,0 +1,36 @@
+{
+  "resourceType": "Organization",
+  "id": "nl-core-Vaccination-02-Organization-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Organisatie. </caption><tbody><tr><th>Naam</th><td>GG&amp;GD Nijmegen</td></tr><tr><th>Adres</th><td>Groenewoudseweg 275, Nijmegen</td></tr></tbody></table></div>"
+  },
+  "name": "GG&GD Nijmegen",
+  "address": [
+    {
+      "line": [
+        "Groenewoudseweg 275"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Groenewoudseweg"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "275"
+            }
+          ]
+        }
+      ],
+      "district": "Nijmegen"
+    }
+  ]
+}

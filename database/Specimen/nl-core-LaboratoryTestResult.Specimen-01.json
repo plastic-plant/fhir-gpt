@@ -1,0 +1,30 @@
+{
+  "resourceType": "Specimen",
+  "id": "nl-core-LaboratoryTestResult.Specimen-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-LaboratoryTestResult.Specimen"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Specimen. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. </caption><tbody><tr><th>Type</th><td><span title=\"bloed (87612001 - SNOMED CT)\">bloed</span></td></tr><tr><th>Inzameling</th><td>09:00:00, 12 juni 2012</td></tr></tbody></table></div>"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "87612001",
+        "display": "bloed"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "collection": {
+    "collectedDateTime": "2012-06-12T09:00:00+02:00"
+  }
+}

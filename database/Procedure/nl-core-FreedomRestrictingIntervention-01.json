@@ -1,0 +1,86 @@
+{
+  "resourceType": "Procedure",
+  "id": "nl-core-FreedomRestrictingIntervention-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-FreedomRestrictingIntervention"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Verrichting. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"beperking van bewegingsvrijheid (225317005 - SNOMED CT)\">beperking van bewegingsvrijheid</span>, Status: voltooid</caption><tbody><tr><td><span title=\"Placing restraint using limb restraint (123941000146105 - SNOMED CT)\">Placing restraint using limb restraint</span></td><td><div>Uitgevoerd: 1 mei 2019 - 5 mei 2019</div></td></tr><tr><th>Reden</th><td><span title=\"Diversion of crisis situation (121491000146107 - SNOMED CT)\">Diversion of crisis situation</span>, Legal situation, representation: Voogdij</td></tr></tbody></table></div>"
+  },
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "legallyCapable",
+          "valueBoolean": false
+        },
+        {
+          "url": "legallyCapableComment",
+          "valueString": "Wilsonbekwaam t.a.v. geldzaken."
+        }
+      ],
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-FreedomRestrictingIntervention.LegallyCapable"
+    },
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-FreedomRestrictingIntervention.Assent",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.6.1",
+            "code": "2",
+            "display": "Instemming patiënt"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "225317005",
+        "display": "beperking van bewegingsvrijheid"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "123941000146105",
+        "display": "Placing restraint using limb restraint"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "performedPeriod": {
+    "start": "2019-05-01",
+    "end": "2019-05-05"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "121491000146107",
+          "display": "Diversion of crisis situation"
+        }
+      ]
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "Condition/nl-core-FreedomRestrictingIntervention-01-Condition-01",
+      "type": "Condition",
+      "display": "Legal situation, representation: Voogdij"
+    }
+  ]
+}

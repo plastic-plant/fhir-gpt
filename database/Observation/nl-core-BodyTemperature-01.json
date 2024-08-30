@@ -1,0 +1,56 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-BodyTemperature-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-BodyTemperature"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"Vital Signs (vital-signs - http://terminology.hl7.org/CodeSystem/observation-category)\">Vital Signs</span>, Status: definitief</caption><tbody><tr><th>Bepalingdatum/tijd</th><td>06:43:00, 8 februari 2013</td></tr><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"Body temperature (8310-5 - LOINC)\">Body temperature</span></td><td>38.6 Cel</td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "8310-5",
+        "display": "Body temperature"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "415974002",
+        "display": "Tympanische temperatuur"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "effectiveDateTime": "2013-02-08T06:43:00+02:00",
+  "valueQuantity": {
+    "value": 38.6,
+    "unit": "Cel",
+    "system": "http://unitsofmeasure.org",
+    "code": "Cel"
+  },
+  "note": [
+    {
+      "text": "Voeten voelen heel koud aan"
+    }
+  ]
+}

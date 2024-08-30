@@ -1,0 +1,24 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-SOAPReport.SOAPLine-04",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-SOAPReport.SOAPLine"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Status: definitief</caption><tbody><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"Beleid (129271007 - SNOMED CT)\">Beleid</span></td><td>Overzetten van enalapril naar telmisartan. Evaluatie over 2 weken.</td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "129271007",
+        "display": "Beleid"
+      }
+    ]
+  },
+  "valueString": "Overzetten van enalapril naar telmisartan. Evaluatie over 2 weken."
+}

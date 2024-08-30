@@ -1,0 +1,65 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-LaboratoryTestResult-04",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-LaboratoryTestResult"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"Laboratory (laboratory - http://terminology.hl7.org/CodeSystem/observation-category)\">Laboratory</span>, <span title=\"Serumtest (275711006 - SNOMED CT)\">Serumtest</span>, Status: definitief</caption><tbody><tr><th>Specimen</th><td>monster</td></tr><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"hemoglobine &amp; hematocriet panel (24360-0 - LOINC)\">hemoglobine &amp; hematocriet panel</span></td><td /></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "275711006",
+          "display": "Serumtest"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "24360-0",
+        "display": "hemoglobine & hematocriet panel"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "specimen": {
+    "reference": "Specimen/nl-core-LaboratoryTestResult.Specimen-04",
+    "type": "Specimen",
+    "display": "monster"
+  },
+  "hasMember": [
+    {
+      "reference": "Observation/nl-core-LaboratoryTestResult-LaboratoryTest-05",
+      "type": "Observation",
+      "display": "laboratorium_test"
+    },
+    {
+      "reference": "Observation/nl-core-LaboratoryTestResult-LaboratoryTest-06",
+      "type": "Observation",
+      "display": "laboratorium_test"
+    }
+  ]
+}

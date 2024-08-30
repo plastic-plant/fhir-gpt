@@ -1,0 +1,75 @@
+{
+  "resourceType": "Procedure",
+  "id": "nl-core-Procedure-event-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure-event"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Verrichting. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: voltooid<span style=\"display: block;\">Uitvoerende: Healthcare professional (role), Orthoptisten</span></caption><tbody><tr><td><span title=\"implantatie van knieprothese (392238003 - SNOMED CT)\">implantatie van knieprothese</span></td><td><div>Uitgevoerd: 5 juni 2012</div></td></tr><tr><th>Deel van lichaam</th><td><span title=\"structuur van knieregio (72696002 - SNOMED CT)\">structuur van knieregio</span></td></tr><tr><th>Locatie</th><td>Healthcare provider (location), UMCG</td></tr><tr><th>Reden</th><td>Problem</td></tr></tbody></table></div>"
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "392238003",
+        "display": "implantatie van knieprothese"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "performedDateTime": "2012-06-05",
+  "performer": [
+    {
+      "actor": {
+        "reference": "PractitionerRole/nl-core-Procedure-01-PractitionerRole-01",
+        "type": "PractitionerRole",
+        "display": "Healthcare professional (role), Orthoptisten"
+      }
+    }
+  ],
+  "location": {
+    "reference": "Location/nl-core-Procedure-01-Location-01",
+    "type": "Location",
+    "display": "Healthcare provider (location), UMCG"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/nl-core-Procedure-01-Condition-01",
+      "type": "Condition",
+      "display": "Problem"
+    }
+  ],
+  "bodySite": [
+    {
+      "extension": [
+        {
+          "url": "http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "7771000",
+                "display": "links"
+              }
+            ]
+          }
+        }
+      ],
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "72696002",
+          "display": "structuur van knieregio"
+        }
+      ]
+    }
+  ]
+}

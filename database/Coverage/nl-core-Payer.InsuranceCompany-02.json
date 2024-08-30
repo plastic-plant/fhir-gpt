@@ -1,0 +1,40 @@
+{
+  "resourceType": "Coverage",
+  "id": "nl-core-Payer.InsuranceCompany-02",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Payer.InsuranceCompany"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Verzekering/garantstelling. Status: geannuleerd</caption><tbody><tr><th>Type</th><td><span title=\"Basis (B - 2.16.840.1.113883.2.4.3.11.60.101.5.1)\">Basis</span></td></tr><tr><th>Periode</th><td>1 januari 2012 - 31 januari 2013</td></tr><tr><th>Verzekerdenummer</th><td>12345678</td></tr><tr><th>Betaler</th><td>Payer-Organization, Menzis Zorgverzekeraar N.V., UZOVI 3332</td></tr><tr><th>begunstigde</th><td>Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen</td></tr></tbody></table></div>"
+  },
+  "status": "cancelled",
+  "type": {
+    "coding": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.1",
+        "code": "B",
+        "display": "Basis"
+      }
+    ]
+  },
+  "subscriberId": "12345678",
+  "beneficiary": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "period": {
+    "start": "2012-01-01",
+    "end": "2013-01-31"
+  },
+  "payor": [
+    {
+      "reference": "Organization/nl-core-Payer-Organization-02",
+      "type": "Organization",
+      "display": "Payer-Organization, Menzis Zorgverzekeraar N.V., UZOVI 3332"
+    }
+  ]
+}

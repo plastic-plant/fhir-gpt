@@ -1,0 +1,31 @@
+{
+  "resourceType": "DeviceUseStatement",
+  "id": "nl-core-BowelFunction-02-DeviceUseStatement-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-MedicalDevice"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Beschrijving apparaatgebruik. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: actief</caption><tbody><tr><th>Apparaat/Systeem</th><td>Elastisch broekje</td></tr></tbody></table></div>"
+  },
+  "status": "active",
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "device": {
+    "reference": "Device/nl-core-BowelFunction-02-Device-01",
+    "type": "Device",
+    "display": "Elastisch broekje"
+  },
+  "reasonReference": [
+    {
+      "reference": "Observation/nl-core-BowelFunction-02",
+      "type": "Observation",
+      "display": "Bowel function observation, fecal continence: incidenteel ontlastingsverlies, defecation consistency: Zachte stukjes met gehavende randen"
+    }
+  ]
+}

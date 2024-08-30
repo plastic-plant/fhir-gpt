@@ -1,0 +1,49 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-LegalSituation-LegalStatus-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-LegalSituation-LegalStatus"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"juridische status van patiënt (303186005 - SNOMED CT)\">juridische status van patiënt</span>, Status: <span title=\"Inactive (inactive - http://terminology.hl7.org/CodeSystem/condition-clinical)\">Inactive</span></caption><tbody><tr><th>Code</th><td><span title=\"Onder toezichtstelling (ots) (OTS - 2.16.840.1.113883.2.4.3.11.60.40.4.23.2)\">Onder toezichtstelling (ots)</span></td></tr><tr><th>Eerste symptomen</th><td>1 januari 2018</td></tr><tr><th>Oplossing/remissie</th><td>1 januari 2020</td></tr></tbody></table></div>"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "inactive",
+        "display": "Inactive"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "303186005",
+          "display": "juridische status van patiënt"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.23.2",
+        "code": "OTS",
+        "display": "Onder toezichtstelling (ots)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "onsetDateTime": "2018-01-01",
+  "abatementDateTime": "2020-01-01"
+}

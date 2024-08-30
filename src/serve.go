@@ -19,6 +19,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 )
 
 var databaseFolder = "../database"
@@ -60,21 +61,21 @@ func main() {
 		return
 	}
 
-	log.Println("Starting FHIR server on localhost:80, serving database", databaseFolder)
+	log.Println("Starting FHIR server on localhost:80. Database:", databaseFolder)
 	http.HandleFunc("/fhir/", fhirHandler)
 	log.Fatal(http.ListenAndServe(":80", nil))
 }
 
 func fhirHandler(w http.ResponseWriter, r *http.Request) {
+	startTime := time.Now()
 
 	// Take resourceType and optional resourceId from the url http://localhost:80/fhir/ResourceType/ResourceId:
-	// http://localhost:80/fhir/Patient/nl-core-Patient-01?_summary=true_include=AllergyIntolerance,EpisodeOfCare
+	// http://localhost/fhir/Patient/nl-core-Patient-01?_summary=true_include=AllergyIntolerance,EpisodeOfCare
 	pathParts := strings.Split(strings.TrimPrefix(r.URL.Path, "/fhir/"), "/")
 	if len(pathParts) < 1 {
 		http.Error(w, "Invalid path, expecting /fhir/ResourceType/{ResourceId}", http.StatusBadRequest)
 		return
 	}
-
 	resourceType := pathParts[0]
 	var resourceId string
 	if len(pathParts) > 1 {
@@ -95,29 +96,23 @@ func fhirHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// Add an auto-generated summary of FHIR resources
-	// if requested and this is a bundle with actual content.
-	if summary && resourceId != "" && len(resourceMap) > 0 {
-
-		resourceMap["summary"] = convertToResource(`{
-			"resource": {
-				"resourceType": "Summary",
-				"subject" : "Patient/nl-core-Patient-01",
-				"date": "2024-01-01",
-				"author": "GPT",
-				"content": "This is a summary of the patient record."
-			}
-		}`)
-	}
-
+	// Include a summary resource if requested, and return a single resource or bundle response.
 	switch len(resourceMap) {
 	case 0:
 		writeErrorJson(w, "not-found")
 	case 1:
+		if summary {
+			includeSummary(resourceMap)
+		}
 		writeResourceJson(w, resourceMap)
 	default:
+		if summary {
+			includeSummary(resourceMap)
+		}
 		writeBundleJson(w, resourceMap)
 	}
+
+	log.Println(fmt.Sprintf("Request %s returned %d resources (%s).", r.URL.Path, len(resourceMap), time.Since(startTime)))
 }
 
 func loadResources(resourceMap map[string]ResourceJsonResponse, resourceType, resourceId string) {
@@ -131,7 +126,7 @@ func loadResources(resourceMap map[string]ResourceJsonResponse, resourceType, re
 	// Load resource content if resourceId is specified (e.g. Patient/patient-123),
 	// else return all resources from folder matching the resource type (e.g. Patient).
 	if resourceId != "" {
-		resourceFile := filepath.Join(resourceFolder, resourceId)
+		resourceFile := filepath.Join(resourceFolder, resourceId+".json")
 		if content := getResourceFromFile(resourceFile); content != nil {
 			resourceMap[resourceId] = content
 		}
@@ -164,6 +159,19 @@ func convertToResource(content string) ResourceJsonResponse {
 		return nil // Ignore JSON errors.
 	}
 	return resourceContent
+}
+
+func includeSummary(resourceMap map[string]ResourceJsonResponse) {
+	summary := convertToResource(`{
+		"resource": {
+			"resourceType": "Summary",
+			"subject" : "Patient/nl-core-Patient-01",
+			"date": "2024-01-01",
+			"author": "GPT",
+			"content": "This is a summary of the patient record."
+		}
+	}`)
+	resourceMap["summary"] = summary
 }
 
 func writeResourceJson(w http.ResponseWriter, resourceMap map[string]ResourceJsonResponse) {

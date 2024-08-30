@@ -1,0 +1,91 @@
+{
+  "resourceType": "Organization",
+  "id": "nl-core-HealthcareProvider-Organization-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Organisatie. Id: 06020806 (URA)</caption><tbody><tr><th>Naam</th><td>Erasmus Universitair Medisch Centrum</td></tr><tr><th>Type</th><td><div><span title=\"Medisch specialisten, cardiologie (0320 - AGB-medisch specialisme)\">Medisch specialisten, cardiologie</span></div><div><span title=\"Universitair Medisch Centrum (V5 - organization-type)\">Universitair Medisch Centrum</span></div></td></tr><tr><th>Contactgegevens</th><td><a href=\"tel:+31107040704\">+31107040704</a> (Tel Werk)<br /><a href=\"mailto:info@erasmus.nl\">info@erasmus.nl</a> (E-mail Werk)<br /></td></tr><tr><th>Adres</th><td>s-Gravendijkwal 230, 3015 CE Rotterdam (Werk)</td></tr></tbody></table></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.nl/fhir/NamingSystem/ura",
+      "value": "06020806"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+          "version": "2020-10-23T00:00:00",
+          "code": "0320",
+          "display": "Medisch specialisten, cardiologie"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
+          "code": "V5",
+          "display": "Universitair Medisch Centrum"
+        }
+      ]
+    }
+  ],
+  "name": "Erasmus Universitair Medisch Centrum",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+31107040704",
+      "use": "work"
+    },
+    {
+      "system": "email",
+      "value": "info@erasmus.nl",
+      "use": "work"
+    }
+  ],
+  "address": [
+    {
+      "extension": [
+        {
+          "url": "http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-AddressUse",
+                "code": "WP",
+                "display": "Work Place"
+              }
+            ]
+          }
+        }
+      ],
+      "use": "work",
+      "line": [
+        "s-Gravendijkwal 230"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "s-Gravendijkwal"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "230"
+            }
+          ]
+        }
+      ],
+      "city": "Rotterdam",
+      "postalCode": "3015 CE"
+    }
+  ]
+}

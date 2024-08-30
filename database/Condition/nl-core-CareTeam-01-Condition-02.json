@@ -1,0 +1,43 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-CareTeam-01-Condition-02",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"Interpretatie van diagnose (282291009 - SNOMED CT)\">Interpretatie van diagnose</span></caption><tfoot><tr><td colspan=\"2\">Houdt veel vocht vast, kortademig</td></tr></tfoot><tbody><tr><th>Code</th><td><span title=\"Hartfalen (195111005 - SNOMED CT)\">Hartfalen</span></td></tr></tbody></table></div>"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "282291009",
+          "display": "Interpretatie van diagnose"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "195111005",
+        "display": "Hartfalen"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "note": [
+    {
+      "text": "Houdt veel vocht vast, kortademig"
+    }
+  ]
+}

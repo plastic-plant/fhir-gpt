@@ -1,0 +1,32 @@
+{
+  "resourceType": "Device",
+  "id": "nl-core-FunctionalOrMentalStatus-01-Device-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-MedicalDevice.Product"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Apparaat/Systeem. Patiënt: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. </caption><tfoot><tr><td colspan=\"2\">Ergonomisch elektrisch scheerapparaat</td></tr></tfoot><tbody><tr><th>Type</th><td><span title=\"elektrisch scheerapparaat (462777007 - SNOMED CT)\">elektrisch scheerapparaat</span></td></tr></tbody></table></div>"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "462777007",
+        "display": "elektrisch scheerapparaat"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "note": [
+    {
+      "text": "Ergonomisch elektrisch scheerapparaat"
+    }
+  ]
+}

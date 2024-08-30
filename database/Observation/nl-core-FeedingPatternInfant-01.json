@@ -1,0 +1,106 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-FeedingPatternInfant-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-FeedingPatternInfant"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Bepalingdatum/tijd</th><td>10:00:00, 20 december 2016</td></tr><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"bevinding betreffende voedingspatroon van zuigeling (289145007 - SNOMED CT)\">bevinding betreffende voedingspatroon van zuigeling</span></td><td /></tr><tr><td><span title=\"voedingssupplement (373453009 - SNOMED CT)\">voedingssupplement</span></td><td>Geen</td></tr><tr><td><span title=\"frequentie van voeding van zuigeling (364653007 - SNOMED CT)\">frequentie van voeding van zuigeling</span></td><td>6 /d</td></tr><tr><td><span title=\"soort zuigelingenvoeding (109021000146107 - SNOMED CT)\">soort zuigelingenvoeding</span></td><td><span title=\"moedermelk (226789007 - SNOMED CT)\">moedermelk</span></td></tr></tbody></table></div>"
+  },
+  "basedOn": [
+    {
+      "reference": "NutritionOrder/nl-core-FeedingPatternInfant-01-NutritionOrder-01",
+      "type": "NutritionOrder",
+      "display": "voedingsadvies"
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "289145007",
+        "display": "bevinding betreffende voedingspatroon van zuigeling"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "effectiveDateTime": "2016-12-20T10:00:00+01:00",
+  "note": [
+    {
+      "text": "Heeft veel zuigbehoefte en krijgt fopspeen voor de nacht"
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "373453009",
+            "display": "voedingssupplement"
+          }
+        ]
+      },
+      "valueString": "Geen"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "364653007",
+            "display": "frequentie van voeding van zuigeling"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 6,
+        "unit": "/d",
+        "system": "http://unitsofmeasure.org",
+        "code": "/d"
+      }
+    },
+    {
+      "extension": [
+        {
+          "url": "http://nictiz.nl/fhir/StructureDefinition/ext-FeedingPatternInfant.FeedingMethod",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "169741004",
+                "display": "zuigeling krijgt voeding via borst"
+              }
+            ]
+          }
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "109021000146107",
+            "display": "soort zuigelingenvoeding"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "226789007",
+            "display": "moedermelk"
+          }
+        ]
+      }
+    }
+  ]
+}

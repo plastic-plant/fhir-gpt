@@ -1,0 +1,27 @@
+{
+  "resourceType": "Device",
+  "id": "nl-core-Stoma-01-Device-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-MedicalDevice.Product"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Apparaat/Systeem. Patiënt: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. </caption><tbody><tr><th>Type</th><td><span title=\"Stomazak (416789009 - SNOMED CT)\">Stomazak</span></td></tr></tbody></table></div>"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "416789009",
+        "display": "Stomazak"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  }
+}

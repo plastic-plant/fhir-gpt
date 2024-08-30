@@ -1,0 +1,66 @@
+{
+  "resourceType": "Location",
+  "id": "nl-core-HealthcareProvider-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Locatie. </caption><tbody><tr><th>Naam</th><td /></tr><tr><th>Contactgegevens</th><td><a href=\"tel:+31107040704\">+31107040704</a> (Tel Werk)<br /><a href=\"mailto:info@erasmus.nl\">info@erasmus.nl</a> (E-mail Werk)<br /></td></tr><tr><th>Adres</th><td>s-Gravendijkwal 230, 3015 CE Rotterdam (Werk)</td></tr></tbody></table></div>"
+  },
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+31107040704",
+      "use": "work"
+    },
+    {
+      "system": "email",
+      "value": "info@erasmus.nl",
+      "use": "work"
+    }
+  ],
+  "address": {
+    "extension": [
+      {
+        "url": "http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-AddressUse",
+              "code": "WP",
+              "display": "Work Place"
+            }
+          ]
+        }
+      }
+    ],
+    "use": "work",
+    "line": [
+      "s-Gravendijkwal 230"
+    ],
+    "_line": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+            "valueString": "s-Gravendijkwal"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+            "valueString": "230"
+          }
+        ]
+      }
+    ],
+    "city": "Rotterdam",
+    "postalCode": "3015 CE"
+  },
+  "managingOrganization": {
+    "reference": "Organization/nl-core-HealthcareProvider-Organization-01",
+    "type": "Organization",
+    "display": "Healthcare provider (organization), Erasmus Universitair Medisch Centrum"
+  }
+}

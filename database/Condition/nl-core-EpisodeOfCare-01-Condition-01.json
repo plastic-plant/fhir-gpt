@@ -1,0 +1,39 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-EpisodeOfCare-01-Condition-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"Klinische bevinding (404684003 - SNOMED CT)\">Klinische bevinding</span></caption><tbody><tr><th>Code</th><td><span title=\"Gestoorde glucosetolerantie (A91.05 - sid/icpc-1-nl)\">Gestoorde glucosetolerantie</span></td></tr><tr><th>Eerste symptomen</th><td>5 april 2014</td></tr></tbody></table></div>"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "404684003",
+          "display": "Klinische bevinding"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/icpc-1-nl",
+        "code": "A91.05",
+        "display": "Gestoorde glucosetolerantie"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "onsetDateTime": "2014-04-05"
+}

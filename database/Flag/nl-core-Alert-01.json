@@ -1,0 +1,53 @@
+{
+  "resourceType": "Flag",
+  "id": "nl-core-Alert-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Alert"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Attentievlag. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"condition (75323-6 - LOINC)\">condition</span>, Status: inactief</caption><tbody><tr><th>Categorie</th><td><span title=\"condition (75323-6 - LOINC)\">condition</span></td></tr><tr><th>Code</th><td><span title=\"Not Applicable (not-applicable - http://terminology.hl7.org/CodeSystem/data-absent-reason)\">Not Applicable</span></td></tr><tr><th>Detail</th><td>Problem, type: Klinische bevinding</td></tr><tr><th>Periode</th><td>15 september 2012 - 30 december 2012</td></tr></tbody></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/flag-detail",
+      "valueReference": {
+        "reference": "Condition/nl-core-Alert-01-Condition-01",
+        "type": "Condition",
+        "display": "Problem, type: Klinische bevinding"
+      }
+    }
+  ],
+  "status": "inactive",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "75323-6",
+          "display": "condition"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+        "code": "not-applicable",
+        "display": "Not Applicable"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "period": {
+    "start": "2012-09-15",
+    "end": "2012-12-30"
+  }
+}

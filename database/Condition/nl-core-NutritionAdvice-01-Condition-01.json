@@ -1,0 +1,27 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-NutritionAdvice-01-Condition-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. </caption><tbody><tr><th>Code</th><td><span title=\"abnormaal gewichtsverlies (267024001 - SNOMED CT)\">abnormaal gewichtsverlies</span></td></tr></tbody></table></div>"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "267024001",
+        "display": "abnormaal gewichtsverlies"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-StrongKidsScore-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-StrongKidsScore"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Bepalingdatum/tijd</th><td>12 december 2016</td></tr><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"STRONGkids-screeningsinstrument (108341000146107 - SNOMED CT)\">STRONGkids-screeningsinstrument</span></td><td>2</td></tr><tr><td><span title=\"StrongKidsScore GewichtsverliesScore (4028003 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">StrongKidsScore GewichtsverliesScore</span></td><td><span title=\"NoLoss (G0 - 2.16.840.1.113883.2.4.3.11.60.40.4.17.1)\">NoLoss</span></td></tr><tr><td><span title=\"StrongKidsScore ZiekteBeeldScore (4028004 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">StrongKidsScore ZiekteBeeldScore</span></td><td><span title=\"IncreasedRisk (R1 - 2.16.840.1.113883.2.4.3.11.60.40.4.17.2)\">IncreasedRisk</span></td></tr><tr><td><span title=\"StrongKidsScore VoedingsScore (4028005 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">StrongKidsScore VoedingsScore</span></td><td><span title=\"Normaal (Z0 - 2.16.840.1.113883.2.4.3.11.60.40.4.17.3)\">Normaal</span></td></tr><tr><td><span title=\"StrongKidsScore VoedingstoestandScore (4028008 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">StrongKidsScore VoedingstoestandScore</span></td><td><span title=\"Goed (T0 - 2.16.840.1.113883.2.4.3.11.60.40.4.17.4)\">Goed</span></td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "108341000146107",
+        "display": "STRONGkids-screeningsinstrument"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "effectiveDateTime": "2016-12-12",
+  "valueInteger": 2,
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "4028003",
+            "display": "StrongKidsScore GewichtsverliesScore"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.17.1",
+            "code": "G0",
+            "display": "NoLoss"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "4028004",
+            "display": "StrongKidsScore ZiekteBeeldScore"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.17.2",
+            "code": "R1",
+            "display": "IncreasedRisk"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "4028005",
+            "display": "StrongKidsScore VoedingsScore"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.17.3",
+            "code": "Z0",
+            "display": "Normaal"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "4028008",
+            "display": "StrongKidsScore VoedingstoestandScore"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.17.4",
+            "code": "T0",
+            "display": "Goed"
+          }
+        ]
+      }
+    }
+  ]
+}

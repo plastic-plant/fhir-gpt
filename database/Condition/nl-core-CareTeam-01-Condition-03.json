@@ -1,0 +1,43 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-CareTeam-01-Condition-03",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"Complicatie (116223007 - SNOMED CT)\">Complicatie</span></caption><tfoot><tr><td colspan=\"2\">Huiduitslag met veel jeuk door medicatie</td></tr></tfoot><tbody><tr><th>Code</th><td><span title=\"Geneesmiddel-interacties (62014003 - SNOMED CT)\">Geneesmiddel-interacties</span></td></tr></tbody></table></div>"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "116223007",
+          "display": "Complicatie"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "62014003",
+        "display": "Geneesmiddel-interacties"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "note": [
+    {
+      "text": "Huiduitslag met veel jeuk door medicatie"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "nl-core-AllergyIntolerance-02",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-AllergyIntolerance"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Allergie/intolerantie. Patiënt: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: medicatie, Status: <span title=\"Active (active - http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical)\">Active</span></caption><tfoot><tr><td colspan=\"2\">test toelichting</td></tr></tfoot><tbody><tr><th>Code</th><td><span title=\"Penicilline (764146007 - SNOMED CT)\">Penicilline</span></td></tr><tr><th>Eerste symptomen</th><td>1 januari 1995</td></tr><tr><th>Meest recente voorkomen</th><td>2 juni 1998</td></tr><tr><th>Reactie</th><td><ul><li><div>2 juni 1998 matig</div><div><span title=\"Exantheem (271807003 - SNOMED CT)\">Exantheem</span></div><div>rode huiduitslag op armen</div></li></ul></td></tr></tbody></table></div>"
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "code": "active",
+        "display": "Active"
+      }
+    ]
+  },
+  "category": [
+    "medication"
+  ],
+  "_category": [
+    {
+      "extension": [
+        {
+          "url": "http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "419511003",
+                "display": "Neiging tot ongewenste reactie op geneesmiddel"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "criticality": "high",
+  "_criticality": {
+    "extension": [
+      {
+        "url": "http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "24484000",
+              "display": "Ernstig"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "764146007",
+        "display": "Penicilline"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "onsetDateTime": "1995-01-01",
+  "lastOccurrence": "1998-06-02",
+  "note": [
+    {
+      "text": "test toelichting"
+    }
+  ],
+  "reaction": [
+    {
+      "substance": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "764146007",
+            "display": "Penicilline"
+          }
+        ]
+      },
+      "manifestation": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "271807003",
+              "display": "Exantheem"
+            }
+          ]
+        }
+      ],
+      "description": "rode huiduitslag op armen",
+      "onset": "1998-06-02",
+      "severity": "moderate"
+    }
+  ]
+}

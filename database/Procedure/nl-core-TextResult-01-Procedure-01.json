@@ -1,0 +1,35 @@
+{
+  "resourceType": "Procedure",
+  "id": "nl-core-TextResult-01-Procedure-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure-event"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Verrichting. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: onbekend</caption><tbody><tr><td><span title=\"implantatie van totale knieprothese (609588000 - SNOMED CT)\">implantatie van totale knieprothese</span></td><td /></tr><tr><th>Report</th><td>tekst_uitslag</td></tr></tbody></table></div>"
+  },
+  "status": "unknown",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "609588000",
+        "display": "implantatie van totale knieprothese"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "report": [
+    {
+      "reference": "DiagnosticReport/nl-core-TextResult-01",
+      "type": "DiagnosticReport",
+      "display": "tekst_uitslag"
+    }
+  ]
+}

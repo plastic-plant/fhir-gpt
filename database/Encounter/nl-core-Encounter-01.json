@@ -1,0 +1,61 @@
+{
+  "resourceType": "Encounter",
+  "id": "nl-core-Encounter-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Encounter"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Contact. Status: onbekend</caption><tbody><tr><th>Type contact</th><td><div><span title=\"Inpatient (IMP - http://terminology.hl7.org/CodeSystem/v3-ActCode)\">Inpatient</span></div></td></tr><tr><th>Periode</th><td>16 augustus 2012 - 19 augustus 2012</td></tr><tr><th>Participant</th><td><div>Healthcare professional (role), G.Z.M. de Wit</div></td></tr><tr><th>Locatie</th><td><div>Healthcare provider (location), St. Lucas Andreas Ziekenhuis</div></td></tr><tr><th>Opnamegegevens</th><td><ul><li>Opname vanuit: <span title=\"Thuis (264362003 - SNOMED CT)\">Thuis</span></li><li>Ontslagwijze: <span title=\"Ziekenhuis (22232009 - SNOMED CT)\">Ziekenhuis</span></li></ul></td></tr></tbody></table></div>"
+  },
+  "status": "unknown",
+  "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "IMP",
+    "display": "Inpatient"
+  },
+  "participant": [
+    {
+      "individual": {
+        "reference": "PractitionerRole/nl-core-Encounter-01-PractitionerRole-01",
+        "type": "PractitionerRole",
+        "display": "Healthcare professional (role), G.Z.M. de Wit"
+      }
+    }
+  ],
+  "period": {
+    "start": "2012-08-16",
+    "end": "2012-08-19"
+  },
+  "hospitalization": {
+    "admitSource": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "264362003",
+          "display": "Thuis"
+        }
+      ]
+    },
+    "dischargeDisposition": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "22232009",
+          "display": "Ziekenhuis"
+        }
+      ]
+    }
+  },
+  "location": [
+    {
+      "location": {
+        "reference": "Location/nl-core-Encounter-01-Location-01",
+        "type": "Location",
+        "display": "Healthcare provider (location), St. Lucas Andreas Ziekenhuis"
+      }
+    }
+  ]
+}

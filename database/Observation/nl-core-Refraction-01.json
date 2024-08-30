@@ -1,0 +1,177 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-Refraction-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Refraction"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Status: definitief</caption><tbody><tr><th>Bepalingdatum/tijd</th><td>1 januari 2020</td></tr><tr><th>Methode</th><td><span title=\"Objectieve refractiemeting (397276001 - SNOMED CT)\">Objectieve refractiemeting</span></td></tr><tr><th>Deel van lichaam</th><td><span title=\"oog (81745001 - SNOMED CT)\">oog</span></td></tr><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"refractiesterkte (251718005 - SNOMED CT)\">refractiesterkte</span></td><td /></tr><tr><td><span title=\"cillindersterkte (251797004 - SNOMED CT)\">cillindersterkte</span></td><td>-0.75 dioptrie</td></tr><tr><td><span title=\"as van cilinder (251799001 - SNOMED CT)\">as van cilinder</span></td><td>90 graden</td></tr><tr><td><span title=\"prismasterkte (251762001 - SNOMED CT)\">prismasterkte</span></td><td>2.00 prisma dioptrie</td></tr><tr><td><span title=\"richting van basis van prisma (246223004 - SNOMED CT)\">richting van basis van prisma</span></td><td>90 graden</td></tr><tr><td><span title=\"sferische sterkte (251795007 - SNOMED CT)\">sferische sterkte</span></td><td>1.00 dioptrie</td></tr><tr><td><span title=\"sferisch equivalent (112881000146107 - SNOMED CT)\">sferisch equivalent</span></td><td>0.63 dioptrie</td></tr><tr><td><span title=\"refractiesterkte (251718005 - SNOMED CT)\">refractiesterkte</span></td><td>2.00 dioptrie</td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "251718005",
+        "display": "refractiesterkte"
+      }
+    ]
+  },
+  "effectiveDateTime": "2020-01-01",
+  "bodySite": {
+    "extension": [
+      {
+        "url": "http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "24028007",
+              "display": "Rechts"
+            }
+          ]
+        }
+      }
+    ],
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "81745001",
+        "display": "oog"
+      }
+    ]
+  },
+  "method": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "397276001",
+        "display": "Objectieve refractiemeting"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "251797004",
+            "display": "cillindersterkte"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": -0.75,
+        "unit": "dioptrie",
+        "system": "http://unitsofmeasure.org",
+        "code": "[diop]"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "251799001",
+            "display": "as van cilinder"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 90,
+        "unit": "graden",
+        "system": "http://unitsofmeasure.org",
+        "code": "deg"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "251762001",
+            "display": "prismasterkte"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 2.00,
+        "unit": "prisma dioptrie",
+        "system": "http://unitsofmeasure.org",
+        "code": "[p'diop]"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "246223004",
+            "display": "richting van basis van prisma"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 90,
+        "unit": "graden",
+        "system": "http://unitsofmeasure.org",
+        "code": "deg"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "251795007",
+            "display": "sferische sterkte"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 1.00,
+        "unit": "dioptrie",
+        "system": "http://unitsofmeasure.org",
+        "code": "[diop]"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "112881000146107",
+            "display": "sferisch equivalent"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 0.63,
+        "unit": "dioptrie",
+        "system": "http://unitsofmeasure.org",
+        "code": "[diop]"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "251718005",
+            "display": "refractiesterkte"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 2.00,
+        "unit": "dioptrie",
+        "system": "http://unitsofmeasure.org",
+        "code": "[diop]"
+      }
+    }
+  ]
+}

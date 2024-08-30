@@ -1,0 +1,44 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-PainScore-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-PainScore"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Bepalingdatum/tijd</th><td>06:43:00, 8 februari 2013</td></tr><tr><th>Methode</th><td><span title=\"VAS10 (VAS10 - 2.16.840.1.113883.2.4.3.11.60.40.4.9.1)\">VAS10</span></td></tr><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"pijnscore (225908003 - SNOMED CT)\">pijnscore</span></td><td>7</td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "225908003",
+        "display": "pijnscore"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "effectiveDateTime": "2013-02-08T06:43:00+01:00",
+  "valueInteger": 7,
+  "note": [
+    {
+      "text": "Bij bewegen"
+    }
+  ],
+  "method": {
+    "coding": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.9.1",
+        "code": "VAS10",
+        "display": "VAS10"
+      }
+    ]
+  }
+}

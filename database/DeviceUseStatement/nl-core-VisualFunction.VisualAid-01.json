@@ -1,0 +1,31 @@
+{
+  "resourceType": "DeviceUseStatement",
+  "id": "nl-core-VisualFunction.VisualAid-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-VisualFunction.VisualAid"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Beschrijving apparaatgebruik. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: actief</caption><tbody><tr><th>Apparaat/Systeem</th><td>Leesbril</td></tr></tbody></table></div>"
+  },
+  "status": "active",
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "device": {
+    "reference": "Device/nl-core-VisualFunction.VisualAid.Product-01",
+    "type": "Device",
+    "display": "Leesbril"
+  },
+  "reasonReference": [
+    {
+      "reference": "Observation/nl-core-VisualFunction-01",
+      "type": "Observation",
+      "display": "Visual function observation, Verlies van gezichtsvermogen"
+    }
+  ]
+}

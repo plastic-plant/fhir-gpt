@@ -1,0 +1,41 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-Pregnancy.PregnancyDuration-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Pregnancy.PregnancyDuration"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"zwangerschapsduur (57036006 - SNOMED CT)\">zwangerschapsduur</span></td><td>24 w</td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "57036006",
+        "display": "zwangerschapsduur"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "focus": [
+    {
+      "reference": "Condition/nl-core-Pregnancy-01",
+      "type": "Condition",
+      "display": "Pregnancy"
+    }
+  ],
+  "valueQuantity": {
+    "value": 24,
+    "unit": "w",
+    "system": "http://unitsofmeasure.org",
+    "code": "{w}"
+  }
+}

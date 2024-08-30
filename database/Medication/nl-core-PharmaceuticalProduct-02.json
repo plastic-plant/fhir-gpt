@@ -1,0 +1,24 @@
+{
+  "resourceType": "Medication",
+  "id": "nl-core-PharmaceuticalProduct-02",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tbody><tr><th>Code</th><td><span title=\"Methotrexaat injvlst 25mg/ml 0,6 ml (89907 - G-Standaard GPK)\">Methotrexaat injvlst 25mg/ml 0,6 ml</span></td></tr></tbody></table></div>"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.4.1",
+        "code": "89907",
+        "display": "Methotrexaat injvlst 25mg/ml 0,6 ml",
+        "userSelected": true
+      }
+    ],
+    "text": "Methotrexaat injvlst 25mg/ml 0,6 ml"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-IllnessPerception-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-IllnessPerception"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"kenmerk van psychosociaal functioneren (363910003 - SNOMED CT)\">kenmerk van psychosociaal functioneren</span></td><td /></tr><tr><td><span title=\"inzicht (27026000 - SNOMED CT)\">inzicht</span></td><td>Kan niet overzien wat de ziekte betekent in het dagelijks leven.</td></tr><tr><td><span title=\"vermogen tot coping (364667003 - SNOMED CT)\">vermogen tot coping</span></td><td>Patiënt wil niet praten over de toekomst.</td></tr><tr><td><span title=\"copinggedrag van familie (405199009 - SNOMED CT)\">copinggedrag van familie</span></td><td>Partner heeft veel vragen over hoe de toekomst er uit ziet.</td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "363910003",
+        "display": "kenmerk van psychosociaal functioneren"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "27026000",
+            "display": "inzicht"
+          }
+        ]
+      },
+      "valueString": "Kan niet overzien wat de ziekte betekent in het dagelijks leven."
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "364667003",
+            "display": "vermogen tot coping"
+          }
+        ]
+      },
+      "valueString": "Patiënt wil niet praten over de toekomst."
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "405199009",
+            "display": "copinggedrag van familie"
+          }
+        ]
+      },
+      "valueString": "Partner heeft veel vragen over hoe de toekomst er uit ziet."
+    }
+  ]
+}

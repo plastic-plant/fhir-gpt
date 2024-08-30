@@ -1,0 +1,43 @@
+{
+  "resourceType": "Condition",
+  "id": "nl-core-CareTeam-01-Condition-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Aandoening. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"Interpretatie van diagnose (282291009 - SNOMED CT)\">Interpretatie van diagnose</span></caption><tfoot><tr><td colspan=\"2\">De laatste weken erg onrustig in de nacht</td></tr></tfoot><tbody><tr><th>Code</th><td><span title=\"vasculaire dementie (429998004 - SNOMED CT)\">vasculaire dementie</span></td></tr></tbody></table></div>"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "282291009",
+          "display": "Interpretatie van diagnose"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "429998004",
+        "display": "vasculaire dementie"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "note": [
+    {
+      "text": "De laatste weken erg onrustig in de nacht"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "nl-core-Vaccination-02-PractitionerRole-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Zorgverlenerrol. </caption><tbody><tr><th>Zorgverlener</th><td><div /><div>Healthcare provider (organization), GG&amp;GD Nijmegen</div></td></tr></tbody></table></div>"
+  },
+  "organization": {
+    "reference": "Organization/nl-core-Vaccination-02-Organization-01",
+    "type": "Organization",
+    "display": "Healthcare provider (organization), GG&GD Nijmegen"
+  }
+}

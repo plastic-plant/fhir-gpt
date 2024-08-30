@@ -1,0 +1,157 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-ComfortScale-02",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-ComfortScale"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Bepalingdatum/tijd</th><td>12:05:00, 21 december 2016</td></tr><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"COMFORT scale (108301000146109 - SNOMED CT)\">COMFORT scale</span></td><td>15</td></tr><tr><td><span title=\"ComfortScore Alertheid (12012003 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ComfortScore Alertheid</span></td><td><span title=\"Awake and alert (Alert4 - 2.16.840.1.113883.2.4.3.11.60.40.4.20.1)\">Awake and alert</span></td></tr><tr><td><span title=\"ComfortScore Kalmte_Agitatie (12012004 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ComfortScore Kalmte_Agitatie</span></td><td><span title=\"Slightly anxious (Calm2 - 2.16.840.1.113883.2.4.3.11.60.40.4.20.2)\">Slightly anxious</span></td></tr><tr><td><span title=\"ComfortScore Ademhalingsreactie (12012005 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ComfortScore Ademhalingsreactie</span></td><td><span title=\"Unrest or resistance to ventilator (Vent3 - 2.16.840.1.113883.2.4.3.11.60.40.4.20.3)\">Unrest or resistance to ventilator</span></td></tr><tr><td><span title=\"ComfortScore Lichaamsbeweging (12012008 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ComfortScore Lichaamsbeweging</span></td><td><span title=\"Occasional, slight movements (Mov2 - 2.16.840.1.113883.2.4.3.11.60.40.4.20.5)\">Occasional, slight movements</span></td></tr><tr><td><span title=\"ComfortScore Gezichtsspanning (12012009 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ComfortScore Gezichtsspanning</span></td><td><span title=\"Normal facial tone (Face2 - 2.16.840.1.113883.2.4.3.11.60.40.4.20.6)\">Normal facial tone</span></td></tr><tr><td><span title=\"ComfortScore Spierspanning (12012010 - 2.16.840.1.113883.2.4.3.11.60.40.4.0.1)\">ComfortScore Spierspanning</span></td><td><span title=\"Reduced muscle tone (Musc2 - 2.16.840.1.113883.2.4.3.11.60.40.4.20.7)\">Reduced muscle tone</span></td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "108301000146109",
+        "display": "COMFORT scale"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "effectiveDateTime": "2016-12-21T12:05:00+01:00",
+  "valueInteger": 15,
+  "note": [
+    {
+      "text": "Controle na verhogen pijnmedicatie."
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12012003",
+            "display": "ComfortScore Alertheid"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.20.1",
+            "code": "Alert4",
+            "display": "Awake and alert"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12012004",
+            "display": "ComfortScore Kalmte_Agitatie"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.20.2",
+            "code": "Calm2",
+            "display": "Slightly anxious"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12012005",
+            "display": "ComfortScore Ademhalingsreactie"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.20.3",
+            "code": "Vent3",
+            "display": "Unrest or resistance to ventilator"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12012008",
+            "display": "ComfortScore Lichaamsbeweging"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.20.5",
+            "code": "Mov2",
+            "display": "Occasional, slight movements"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12012009",
+            "display": "ComfortScore Gezichtsspanning"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.20.6",
+            "code": "Face2",
+            "display": "Normal facial tone"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0.1",
+            "code": "12012010",
+            "display": "ComfortScore Spierspanning"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.20.7",
+            "code": "Musc2",
+            "display": "Reduced muscle tone"
+          }
+        ]
+      }
+    }
+  ]
+}

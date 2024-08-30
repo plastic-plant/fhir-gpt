@@ -1,0 +1,68 @@
+{
+  "resourceType": "Consent",
+  "id": "nl-core-TreatmentDirective2-01-Consent-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-AdvanceDirective"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Toestemming. Patiënt: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"Advance Directive (acd - http://terminology.hl7.org/CodeSystem/consentcategorycodes)\">Advance Directive</span>, Status: actief</caption><tbody><tr><th>Gemaakt</th><td>6 mei 2010</td></tr><tr><th>Bron </th><td><img src=\"data:application/octet-stream;base64,volmacht\" alt=\"\" /></td></tr></tbody></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Comment",
+      "valueString": "volmacht aan echtgenote"
+    }
+  ],
+  "status": "active",
+  "scope": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+        "code": "adr",
+        "display": "Advanced Care Directive"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/consentcategorycodes",
+          "code": "acd",
+          "display": "Advance Directive"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "dateTime": "2010-05-06",
+  "sourceAttachment": {
+    "contentType": "application/octet-stream",
+    "data": "volmacht"
+  },
+  "policy": [
+    {
+      "uri": "https://wetten.overheid.nl/"
+    }
+  ],
+  "provision": {
+    "code": [
+      {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.14.1",
+            "code": "VOL",
+            "display": "Volmacht"
+          }
+        ]
+      }
+    ]
+  }
+}

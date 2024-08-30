@@ -1,0 +1,42 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-LifeStance-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-LifeStance"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"geloofsovertuiging (160538000 - SNOMED CT)\">geloofsovertuiging</span></td><td><span title=\"protestant (309885004 - SNOMED CT)\">protestant</span></td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "160538000",
+        "display": "geloofsovertuiging"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "309885004",
+        "display": "protestant"
+      }
+    ]
+  },
+  "note": [
+    {
+      "text": "Hecht veel waarde aan Kerst."
+    }
+  ]
+}

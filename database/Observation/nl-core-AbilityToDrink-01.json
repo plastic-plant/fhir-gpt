@@ -1,0 +1,79 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-AbilityToDrink-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-AbilityToDrink"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"vermogen om te drinken (288852001 - SNOMED CT)\">vermogen om te drinken</span></td><td><span title=\"Hulp nodig bij drinken (16681000146102 - SNOMED CT)\">Hulp nodig bij drinken</span></td></tr><tr><td><span title=\"vermogen tot drinken (288851008 - SNOMED CT)\">vermogen tot drinken</span></td><td><span title=\"Moeite met vastpakken van drank (307071002 - SNOMED CT)\">Moeite met vastpakken van drank</span></td></tr><tr><td><span title=\"vermogen tot drinken (288851008 - SNOMED CT)\">vermogen tot drinken</span></td><td><span title=\"Moeite met naar mond brengen van drank (288876009 - SNOMED CT)\">Moeite met naar mond brengen van drank</span></td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "288852001",
+        "display": "vermogen om te drinken"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "16681000146102",
+        "display": "Hulp nodig bij drinken"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "288851008",
+            "display": "vermogen tot drinken"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "307071002",
+            "display": "Moeite met vastpakken van drank"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "288851008",
+            "display": "vermogen tot drinken"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "288876009",
+            "display": "Moeite met naar mond brengen van drank"
+          }
+        ]
+      }
+    }
+  ]
+}

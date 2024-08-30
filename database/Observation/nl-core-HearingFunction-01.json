@@ -1,0 +1,42 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-HearingFunction-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HearingFunction"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"gehoorfunctie (47078008 - SNOMED CT)\">gehoorfunctie</span></td><td><span title=\"Gehoorverlies (15188001 - SNOMED CT)\">Gehoorverlies</span></td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "47078008",
+        "display": "gehoorfunctie"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "15188001",
+        "display": "Gehoorverlies"
+      }
+    ]
+  },
+  "note": [
+    {
+      "text": "Door duidelijk articuleren en langzaam te praten kan patiënt redelijk verstaan."
+    }
+  ]
+}

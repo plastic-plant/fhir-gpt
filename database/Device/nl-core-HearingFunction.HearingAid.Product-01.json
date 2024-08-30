@@ -1,0 +1,32 @@
+{
+  "resourceType": "Device",
+  "id": "nl-core-HearingFunction.HearingAid.Product-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HearingFunction.HearingAid.Product"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Apparaat/Systeem. Patiënt: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. </caption><tfoot><tr><td colspan=\"2\">Gehoorapparaat</td></tr></tfoot><tbody><tr><th>Type</th><td><span title=\"Gehoorapparaat (6012004 - SNOMED CT)\">Gehoorapparaat</span></td></tr></tbody></table></div>"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "6012004",
+        "display": "Gehoorapparaat"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "note": [
+    {
+      "text": "Gehoorapparaat"
+    }
+  ]
+}

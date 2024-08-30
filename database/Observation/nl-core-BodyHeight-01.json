@@ -1,0 +1,73 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-BodyHeight-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-BodyHeight"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"Vital Signs (vital-signs - http://terminology.hl7.org/CodeSystem/observation-category)\">Vital Signs</span>, Status: definitief</caption><tbody><tr><th>Bepalingdatum/tijd</th><td>06:43:00, 8 februari 2013</td></tr><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"Body height (8302-2 - LOINC)\">Body height</span></td><td>153 cm</td></tr><tr><td><span title=\"Body position for height measurement (425260001 - SNOMED CT)\">Body position for height measurement</span></td><td><span title=\"Staande positie (10904000 - SNOMED CT)\">Staande positie</span></td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "8302-2",
+        "display": "Body height"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "effectiveDateTime": "2013-02-08T06:43:00+01:00",
+  "valueQuantity": {
+    "value": 153,
+    "unit": "cm",
+    "system": "http://unitsofmeasure.org",
+    "code": "cm"
+  },
+  "note": [
+    {
+      "text": "Met schoenen aan"
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "425260001",
+            "display": "Body position for height measurement"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "10904000",
+            "display": "Staande positie"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "resourceType": "Organization",
+  "id": "nl-core-Encounter-01-Organization-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Organisatie. </caption><tbody><tr><th>Naam</th><td>St. Lucas Andreas Ziekenhuis</td></tr><tr><th>Type</th><td><span title=\"Ziekenhuis (V4 - organization-type)\">Ziekenhuis</span></td></tr></tbody></table></div>"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
+          "code": "V4",
+          "display": "Ziekenhuis"
+        }
+      ]
+    }
+  ],
+  "name": "St. Lucas Andreas Ziekenhuis"
+}

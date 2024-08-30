@@ -1,0 +1,18 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "nl-core-Encounter-01-PractitionerRole-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Zorgverlenerrol. </caption><tbody><tr><th>Zorgverlener</th><td><div>Healthcare professional (person), G.Z.M. de Wit</div></td></tr></tbody></table></div>"
+  },
+  "practitioner": {
+    "reference": "Practitioner/nl-core-Encounter-01-Practitioner-01",
+    "type": "Practitioner",
+    "display": "Healthcare professional (person), G.Z.M. de Wit"
+  }
+}

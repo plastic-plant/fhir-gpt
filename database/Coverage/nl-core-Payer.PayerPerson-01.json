@@ -1,0 +1,53 @@
+{
+  "resourceType": "Coverage",
+  "id": "nl-core-Payer.PayerPerson-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Payer.PayerPerson"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Verzekering/garantstelling. Status: actief</caption><tbody><tr><th>Type</th><td>pay (http://terminology.hl7.org/CodeSystem/coverage-selfpay)</td></tr><tr><th>Betaler</th><td>Payer-Organization, Stichting Het Goede Doel</td></tr><tr><th>begunstigde</th><td>Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen</td></tr></tbody></table></div>"
+  },
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "bankName",
+          "valueString": "ING"
+        },
+        {
+          "url": "bankCode",
+          "valueString": "INGBNL2A"
+        },
+        {
+          "url": "accountNumber",
+          "valueString": "NL85INGB0001234567"
+        }
+      ],
+      "url": "http://nictiz.nl/fhir/StructureDefinition/ext-Payer.BankInformation"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/coverage-selfpay",
+        "code": "pay"
+      }
+    ]
+  },
+  "beneficiary": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "payor": [
+    {
+      "reference": "Organization/nl-core-Payer-Organization-01",
+      "type": "Organization",
+      "display": "Payer-Organization, Stichting Het Goede Doel"
+    }
+  ]
+}

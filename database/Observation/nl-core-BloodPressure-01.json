@@ -1,0 +1,170 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-BloodPressure-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-BloodPressure"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"Vital Signs (vital-signs - http://terminology.hl7.org/CodeSystem/observation-category)\">Vital Signs</span>, Status: definitief</caption><tbody><tr><th>Bepalingdatum/tijd</th><td>06:43:00, 8 februari 2013</td></tr><tr><th>Methode</th><td><span title=\"Bloeddrukmeting met gebruikmaking van manchet (371911009 - SNOMED CT)\">Bloeddrukmeting met gebruikmaking van manchet</span></td></tr><tr><th>Deel van lichaam</th><td><span title=\"Rechter bovenarm (368209003 - SNOMED CT)\">Rechter bovenarm</span></td></tr><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"Blood pressure panel with all children optional (85354-9 - LOINC)\">Blood pressure panel with all children optional</span></td><td /></tr><tr><td><span title=\"Systolic blood pressure (8480-6 - LOINC)\">Systolic blood pressure</span></td><td>125 mmHg</td></tr><tr><td><span title=\"Diastolic blood pressure (8462-4 - LOINC)\">Diastolic blood pressure</span></td><td>75 mmHg</td></tr><tr><td><span title=\"Korotkofftonen (waarneembare entiteit) (85549003 - SNOMED CT)\">Korotkofftonen (waarneembare entiteit)</span></td><td><span title=\"Fase 4 (255271000 - SNOMED CT)\">Fase 4</span></td></tr><tr><td><span title=\"Blood pressure cuff (70665002 - SNOMED CT)\">Blood pressure cuff</span></td><td><span title=\"Standaard (Standaard manchet voor een volwassene (manchet 16x30 cm) (STD - 2.16.840.1.113883.2.4.3.11.60.40.4.15.1)\">Standaard (Standaard manchet voor een volwassene (manchet 16x30 cm)</span></td></tr><tr><td><span title=\"gemiddelde bloeddruk (waarneembare entiteit) (6797001 - SNOMED CT)\">gemiddelde bloeddruk (waarneembare entiteit)</span></td><td>100 mmHg</td></tr></tbody></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/observation-bodyPosition",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "33586001",
+            "display": "Zittende positie"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "85354-9",
+        "display": "Blood pressure panel with all children optional"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "effectiveDateTime": "2013-02-08T06:43:00+01:00",
+  "note": [
+    {
+      "text": "Mw. is zwanger"
+    }
+  ],
+  "bodySite": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "368209003",
+        "display": "Rechter bovenarm"
+      }
+    ]
+  },
+  "method": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "371911009",
+        "display": "Bloeddrukmeting met gebruikmaking van manchet"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "8480-6",
+            "display": "Systolic blood pressure"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 125,
+        "unit": "mmHg",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "8462-4",
+            "display": "Diastolic blood pressure"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 75,
+        "unit": "mmHg",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "85549003",
+            "display": "Korotkofftonen (waarneembare entiteit)"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "255271000",
+            "display": "Fase 4"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "70665002",
+            "display": "Blood pressure cuff"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.15.1",
+            "code": "STD",
+            "display": "Standaard (Standaard manchet voor een volwassene (manchet 16x30 cm)"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "6797001",
+            "display": "gemiddelde bloeddruk (waarneembare entiteit)"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 100,
+        "unit": "mmHg",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]"
+      }
+    }
+  ]
+}

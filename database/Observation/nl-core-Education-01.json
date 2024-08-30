@@ -1,0 +1,42 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-Education-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Education"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"opleidingsniveau (105421008 - SNOMED CT)\">opleidingsniveau</span></td><td><span title=\"Hbo-, wo-master, doctor (321 - 2.16.840.1.113883.2.4.3.11.60.40.4.24.1)\">Hbo-, wo-master, doctor</span></td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "105421008",
+        "display": "opleidingsniveau"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.24.1",
+        "code": "321",
+        "display": "Hbo-, wo-master, doctor"
+      }
+    ]
+  },
+  "note": [
+    {
+      "text": "Patiënt heeft Geneeskunde gestudeerd."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "resourceType": "CarePlan",
+  "id": "nl-core-HelpFromOthers-02",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HelpFromOthers"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Zorgplan. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Categorie: <span title=\"ondersteuning (243114000 - SNOMED CT)\">ondersteuning</span>, Status: actief<span style=\"display: block;\">Intentie: plan</span></caption><tfoot><tr><td colspan=\"2\">Voornamelijk van belang om voldoende steun te bieden tijdens het douchen vanwege gevaar op vallen.</td></tr></tfoot><tbody><tr><th>Activiteit</th><td><table><tbody><tr><td colspan=\"2\"><table><caption>Details<span style=\"display: block;\">Status: is bezig</span></caption><tbody><tr><th>Code</th><td><span title=\"thuiszorg voor patiënt (60689008 - SNOMED CT)\">thuiszorg voor patiënt</span></td></tr><tr><th>Omschrijving</th><td>Ondersteuning bij wassen</td></tr><tr><th>Schema</th><td>Dagelijks</td></tr><tr><th>Uitvoerende</th><td>Healthcare provider (organization), Thuiszorg X</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>"
+  },
+  "status": "active",
+  "intent": "plan",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "243114000",
+          "display": "ondersteuning"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "activity": [
+    {
+      "detail": {
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "60689008",
+              "display": "thuiszorg voor patiënt"
+            }
+          ]
+        },
+        "status": "in-progress",
+        "scheduledString": "Dagelijks",
+        "performer": [
+          {
+            "reference": "Organization/nl-core-HelpFromOthers-02-Organization-01",
+            "type": "Organization",
+            "display": "Healthcare provider (organization), Thuiszorg X"
+          }
+        ],
+        "description": "Ondersteuning bij wassen"
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "Voornamelijk van belang om voldoende steun te bieden tijdens het douchen vanwege gevaar op vallen."
+    }
+  ]
+}

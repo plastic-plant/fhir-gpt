@@ -1,0 +1,38 @@
+{
+  "resourceType": "Location",
+  "id": "nl-core-Vaccination-02-Location-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Locatie. </caption><tbody><tr><th>Naam</th><td /></tr><tr><th>Adres</th><td>Groenewoudseweg 275, Nijmegen</td></tr></tbody></table></div>"
+  },
+  "address": {
+    "line": [
+      "Groenewoudseweg 275"
+    ],
+    "_line": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+            "valueString": "Groenewoudseweg"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+            "valueString": "275"
+          }
+        ]
+      }
+    ],
+    "district": "Nijmegen"
+  },
+  "managingOrganization": {
+    "reference": "Organization/nl-core-Vaccination-02-Organization-01",
+    "type": "Organization",
+    "display": "Healthcare provider (organization), GG&GD Nijmegen"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "nl-core-CareTeam-01-PractitionerRole-03",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Zorgverlenerrol. </caption><tbody><tr><th>Zorgverlener</th><td><div>Healthcare professional (person), R.M. van Heck</div></td></tr><tr><th>Specialisme</th><td><span title=\"Medisch specialisten, cardiologie (0320 - AGB-medisch specialisme)\">Medisch specialisten, cardiologie</span></td></tr></tbody></table></div>"
+  },
+  "practitioner": {
+    "reference": "Practitioner/nl-core-CareTeam-01-Practitioner-03",
+    "type": "Practitioner",
+    "display": "Healthcare professional (person), R.M. van Heck"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
+          "version": "2020-10-23T00:00:00",
+          "code": "0320",
+          "display": "Medisch specialisten, cardiologie"
+        }
+      ]
+    }
+  ]
+}

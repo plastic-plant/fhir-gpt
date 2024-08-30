@@ -1,0 +1,42 @@
+{
+  "resourceType": "Observation",
+  "id": "nl-core-VisualFunction-01",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-VisualFunction"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><caption>Observatie/bepaling. Subject: Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen. Status: definitief</caption><tbody><tr><th>Code</th><th>Waarde</th></tr><tr><td><span title=\"visuele functie (281004000 - SNOMED CT)\">visuele functie</span></td><td><span title=\"Verlies van gezichtsvermogen (397540003 - SNOMED CT)\">Verlies van gezichtsvermogen</span></td></tr></tbody></table></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "281004000",
+        "display": "visuele functie"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/nl-core-Patient-01",
+    "type": "Patient",
+    "display": "Patient, Johanna Petronella Maria (Jo) van Putten-van der Giessen"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "397540003",
+        "display": "Verlies van gezichtsvermogen"
+      }
+    ]
+  },
+  "note": [
+    {
+      "text": "Ziet met linkeroog slechter dan met het rechteroog."
+    }
+  ]
+}
