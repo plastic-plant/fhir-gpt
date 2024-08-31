@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug import.go",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${fileDirname}",
+            "args": ["run", "import", "../examples", "../database"]
+
+        },
+        {
+            "name": "Debug import.csx",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "exec",
+                "C:/Users/Patrick/.dotnet/tools/.store/dotnet-script/1.5.0/dotnet-script/1.5.0/tools/net8.0/any/dotnet-script.dll",
+                "import.csx",
+                "--",
+                "../examples",
+                "../database"
+            ],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Debug serve.go",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${fileDirname}",
+            "args": [
+                "run",
+                "serve.go"
+            ]
+        }
+    ]
+}
