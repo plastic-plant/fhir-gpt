@@ -24,12 +24,6 @@ import (
 
 var databaseFolder = "../database"
 
-// "resourceType": "Bundle",
-// "id": "3a0707d3-549e-4467-b8b8-5a2ab3800efe",
-// "type": "message",
-// "timestamp": "2024-07-14T11:15:33+10:00",
-// "entry": [ resource: {} ]
-
 type BundleJsonResponse struct {
 	ResourceType string        `json:"resourceType"`
 	Entry        []BundleEntry `json:"entry"`
@@ -55,8 +49,8 @@ func main() {
 		fmt.Println("Example: serve ../database")
 		fmt.Println("Example: go run serve.go ~/fhir-gpt/database")
 		fmt.Println("Example: go run serve.go C:\\Program Files\\fhir-gpt\\database")
-		fmt.Println("Try:     http://localhost:80/fhir/Patient")
-		fmt.Println("Try:     http://localhost:80/fhir/Patient/nl-core-Patient-01?_summary=true_include=AllergyIntolerance,EpisodeOfCare")
+		fmt.Println("Try:     http://localhost/fhir/Patient")
+		fmt.Println("Try:     http://localhost/fhir/Patient/nl-core-Patient-01?_summary=true&_include=AllergyIntolerance,EpisodeOfCare")
 		fmt.Println()
 		return
 	}
@@ -69,8 +63,8 @@ func main() {
 func fhirHandler(w http.ResponseWriter, r *http.Request) {
 	startTime := time.Now()
 
-	// Take resourceType and optional resourceId from the url http://localhost:80/fhir/ResourceType/ResourceId:
-	// http://localhost/fhir/Patient/nl-core-Patient-01?_summary=true_include=AllergyIntolerance,EpisodeOfCare
+	// Take resourceType and optional resourceId from the url http://localhost/fhir/ResourceType/ResourceId, eg
+	// http://localhost/fhir/Patient/nl-core-Patient-01?_summary=true&_include=AllergyIntolerance,EpisodeOfCare
 	pathParts := strings.Split(strings.TrimPrefix(r.URL.Path, "/fhir/"), "/")
 	if len(pathParts) < 1 {
 		http.Error(w, "Invalid path, expecting /fhir/ResourceType/{ResourceId}", http.StatusBadRequest)
@@ -82,37 +76,37 @@ func fhirHandler(w http.ResponseWriter, r *http.Request) {
 		resourceId = pathParts[1]
 	}
 
-	// Take optional query parameters from the url: _summary is true by default, and
-	// _include is an array of additional resource types to include in bundled response.
-	summary := r.URL.Query().Get("_summary") != "false"
-	include := strings.Split(r.URL.Query().Get("_include"), ",")
-
-	// Load resources requested matching files in database into a dictionary.
+	// Load content for requested resource type, matching files in database into a dictionary.
 	resourceMap := make(map[string]ResourceJsonResponse)
 	loadResources(resourceMap, resourceType, resourceId)
-	for _, includeResourceType := range include {
-		if includeResourceType != "" {
-			loadResources(resourceMap, includeResourceType, "")
+
+	// Load additional resource types in bundled response when optional _include is given in url.
+	if len(resourceMap) > 0 {
+		includeOptionalLinkedResourceTypes := strings.Split(r.URL.Query().Get("_include"), ",")
+		for _, includeResourceType := range includeOptionalLinkedResourceTypes {
+			if includeResourceType != "" {
+				loadResources(resourceMap, includeResourceType, "")
+			}
 		}
 	}
 
-	// Include a summary resource if requested, and return a single resource or bundle response.
+	// Add generated custom summary resource in bundle, unless _summary=false is given in url.
+	summary := r.URL.Query().Get("_summary") != "false"
+	if summary && len(resourceMap) > 0 {
+		includeSummary(resourceMap)
+	}
+
+	// Return operation outcome, a single resource or bundle response.
 	switch len(resourceMap) {
 	case 0:
 		writeErrorJson(w, "not-found")
 	case 1:
-		if summary {
-			includeSummary(resourceMap)
-		}
 		writeResourceJson(w, resourceMap)
 	default:
-		if summary {
-			includeSummary(resourceMap)
-		}
 		writeBundleJson(w, resourceMap)
 	}
 
-	log.Println(fmt.Sprintf("Request %s returned %d resources (%s).", r.URL.Path, len(resourceMap), time.Since(startTime)))
+	log.Println(fmt.Sprintf("[%s] Request for %s returned %d resources.", time.Since(startTime), r.URL.Path, len(resourceMap)))
 }
 
 func loadResources(resourceMap map[string]ResourceJsonResponse, resourceType, resourceId string) {
@@ -156,21 +150,18 @@ func convertToResource(content string) ResourceJsonResponse {
 	var resourceContent ResourceJsonResponse
 	if err := json.Unmarshal([]byte(content), &resourceContent); err != nil {
 		fmt.Println("Error unmarshalling JSON from file")
-		return nil // Ignore JSON errors.
+		return nil
 	}
 	return resourceContent
 }
 
 func includeSummary(resourceMap map[string]ResourceJsonResponse) {
-	summary := convertToResource(`{
-		"resource": {
-			"resourceType": "Summary",
-			"subject" : "Patient/nl-core-Patient-01",
-			"date": "2024-01-01",
-			"author": "GPT",
-			"content": "This is a summary of the patient record."
-		}
-	}`)
+	summary := make(ResourceJsonResponse)
+	summary["resourceType"] = "Summary"
+	summary["subject"] = "Patient/nl-core-Patient-01"
+	summary["date"] = "2024-01-01"
+	summary["author"] = "GPT"
+	summary["content"] = "This is a summary of the patient record."
 	resourceMap["summary"] = summary
 }
 
