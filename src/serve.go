@@ -11,6 +11,7 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -20,6 +21,9 @@ import (
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/tmc/langchaingo/llms"
+	"github.com/tmc/langchaingo/llms/openai"
 )
 
 var databaseFolder = "../database"
@@ -54,6 +58,8 @@ func main() {
 		fmt.Println()
 		return
 	}
+
+	os.Setenv("OPENAI_API_KEY", "sk-1234567890abcdef1234567890abcdef")
 
 	log.Println("Starting FHIR server on localhost:80. Database:", databaseFolder)
 	http.HandleFunc("/fhir/", fhirHandler)
@@ -106,7 +112,7 @@ func fhirHandler(w http.ResponseWriter, r *http.Request) {
 		writeBundleJson(w, resourceMap)
 	}
 
-	log.Println(fmt.Sprintf("[%s] Request for %s returned %d resources.", time.Since(startTime), r.URL.Path, len(resourceMap)))
+	log.Printf("[%s] Request for %s returned %d resources.", time.Since(startTime), r.URL.Path, len(resourceMap))
 }
 
 func loadResources(resourceMap map[string]ResourceJsonResponse, resourceType, resourceId string) {
@@ -156,13 +162,38 @@ func convertToResource(content string) ResourceJsonResponse {
 }
 
 func includeSummary(resourceMap map[string]ResourceJsonResponse) {
+
+	var text string
+	for _, resource := range resourceMap {
+		json, _ := json.Marshal(resource)
+		text += generateSummary(string(json))
+	}
+
 	summary := make(ResourceJsonResponse)
 	summary["resourceType"] = "Summary"
 	summary["subject"] = "Patient/nl-core-Patient-01"
-	summary["date"] = "2024-01-01"
+	summary["date"] = time.Now().Format("2024-01-02")
 	summary["author"] = "GPT"
-	summary["content"] = "This is a summary of the patient record."
+	summary["text"] = text
 	resourceMap["summary"] = summary
+}
+
+func generateSummary(content string) string {
+	llm, err := openai.New()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Create a clinical summary from the FHIR JSON data intended for a clinician’s review. The summary should prioritize information that impacts ongoing treatment decisions, such as current diagnoses, treatment plans, and medications. After generating the summary, verify that all relevant conditions and medication are included.
+	prompt := "Using the FHIR JSON data provided, summarize the key health information for the patient. Include the patient's demographics, conditions, and any active medication requests. Combine multiple summaries into one SHORT summary. Do NOT include SNOMED codes. Do NOT mention the FHIR JSON data. Reduce the use of patient name.\n\n" + content
+	ctx := context.Background()
+	completion, err := llms.GenerateFromSinglePrompt(ctx, llm, prompt)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return completion // Patient John Doe (male, born on January 1, 1980) has been diagnosed with Type 2 Diabetes Mellitus, which is currently active as of January 15, 2023. The patient has an active medication request for Metformin 500mg (RxNorm code: 860975) prescribed on January 20, 2023.
+	// Patient Johanna Petronella Maria (Jo) van Putten-van der Giessen, had a zorg episode from April 5, 2014, to April 5, 2015, for poorly controlled diabetes mellitus with a risk of hypoglycemia. It is advised not to tightly regulate insulin for this condition. The key health information includes the diagnosis of poorly controlled diabetes mellitus with a risk of hypoglycemia and the caution against tight insulin regulation. No active medication requests are mentioned in the provided data.The patient is a female born on April 28, 1934, residing in Hoogmade, Netherlands. She is divorced and has multiple births. The patient's primary contact is J.P.M. van Putten-van der Giessen, who is both a first contact person and a healthcare provider. The patient's nationality is Dutch.
 }
 
 func writeResourceJson(w http.ResponseWriter, resourceMap map[string]ResourceJsonResponse) {
