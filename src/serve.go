@@ -172,7 +172,7 @@ func includeSummary(resourceMap map[string]ResourceJsonResponse) {
 	summary := make(ResourceJsonResponse)
 	summary["resourceType"] = "Summary"
 	summary["subject"] = "Patient/nl-core-Patient-01"
-	summary["date"] = time.Now().Format("2024-01-02")
+	summary["date"] = time.Now().Format("2006-01-02")
 	summary["author"] = "GPT"
 	summary["text"] = text
 	resourceMap["summary"] = summary
