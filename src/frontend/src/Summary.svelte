@@ -17,6 +17,6 @@
 <style>
 	.highlight {
 		color: blue;
-    margin-bottom: 5rem;
+		margin-bottom: 3rem;
 	}
 </style>
